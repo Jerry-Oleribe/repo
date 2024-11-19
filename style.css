@@ -5,6 +5,9 @@ body {
  padding: 0;
  background-color: #f0f8ff;
 }
+strong, th {
+ color: #333333
+}
 
 /* Navigation bar */
 .top-nav {
@@ -93,6 +96,13 @@ body {
  margin: 2rem 0;
 }
 
+/* Multicol layout for Benefits of Programming section */
+#benefits-of-programming ul {
+ column-count: 1; /* Divide text into 2 columns */
+ column-gap: 1rem; /* Add spacing between columns */
+ margin-top: 0;
+}
+
 .nav-button {
  background-color: #20b2aa;
  border: none;
@@ -170,7 +180,7 @@ section#programming-languages > h2 {
  text-align: center;
 }
 #programming-languages {
-    overflow: auto; 
+ overflow: auto;
 }
 
 /* #image-passage {
@@ -237,6 +247,10 @@ footer a:hover {
  .button-container {
   flex-direction: column;
   margin: 0px 30px 0px 0px;
+ }
+
+ #benefits-of-programming p {
+  column-count: 1; /* Revert to single column on smaller screens */
  }
  /* Adjust footer padding and font size */
  footer {
