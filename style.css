@@ -5,9 +5,6 @@ body {
  padding: 0;
  background-color: #f0f8ff;
 }
-strong, th {
- color: #333333
-}
 
 /* Navigation bar */
 .top-nav {
@@ -94,13 +91,6 @@ strong, th {
  justify-content: center;
  gap: 2rem;
  margin: 2rem 0;
-}
-
-/* Multicol layout for Benefits of Programming section */
-#benefits-of-programming ul {
- column-count: 1; /* Divide text into 2 columns */
- column-gap: 1rem; /* Add spacing between columns */
- margin-top: 0;
 }
 
 .nav-button {
@@ -248,9 +238,16 @@ footer a:hover {
   flex-direction: column;
   margin: 0px 30px 0px 0px;
  }
+ .multi-column .columns {
+  flex-direction: column; /* Stack items vertically */
+ }
 
- #benefits-of-programming p {
-  column-count: 1; /* Revert to single column on smaller screens */
+ .multi-column .columns div {
+  flex: unset; /* Disable flexible width */
+  width: 100%; /* Make blocks occupy the full width */
+ }
+ .multi-column .columns div img {
+    height: auto;
  }
  /* Adjust footer padding and font size */
  footer {
@@ -279,4 +276,33 @@ footer a:hover {
  #topics h2 {
   text-align: center;
  }
+}
+
+/* Multi-column layout styles */
+.multi-column {
+ padding: 20px;
+ background-color: #f9f9f9;
+}
+
+.multi-column h2 {
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.multi-column .columns {
+ display: flex;
+ justify-content: space-between;
+ gap: 20px;
+}
+
+.multi-column .columns div {
+ flex: 1;
+ background: #e0e0e0;
+ padding: 10px;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.multi-column .columns div img {
+    object-fit: cover;
 }
