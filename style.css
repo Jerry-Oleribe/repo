@@ -293,6 +293,8 @@ footer a:hover {
  display: flex;
  justify-content: space-between;
  gap: 20px;
+ margin-left: 15px;
+ margin-right: 15px;
 }
 
 .multi-column .columns div {
