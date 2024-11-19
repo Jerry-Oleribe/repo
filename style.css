@@ -5,7 +5,9 @@ body {
  padding: 0;
  background-color: #f0f8ff;
 }
-
+a, a:hover {
+    text-decoration: none;
+}
 /* Navigation bar */
 .top-nav {
  background-color: #333;
